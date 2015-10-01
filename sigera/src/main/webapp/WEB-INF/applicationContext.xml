@@ -12,9 +12,31 @@
     
     
     <!-- Beans Declaration -->
-   <bean id="Departamento" class="com.sigera.model.Departamento"/>
-   <bean id="Provincia" class="com.sigera.model.Provincia"/>
-   
+    <bean id="Departamento" class="com.sigera.model.Departamento"/>
+    <bean id="Provincia" class="com.sigera.model.Provincia"/>
+    <bean id="Distrito" class="com.sigera.model.Distrito"/>
+    <bean id="Direccion" class="com.sigera.model.Direccion"/>
+    <bean id="Persona" class="com.sigera.model.Persona"/>
+    <bean id="Perfil" class="com.sigera.model.Perfil"/>
+    <bean id="Curso" class="com.sigera.model.Curso"/>
+    <bean id="Material" class="com.sigera.model.Material"/>
+    <bean id="Matricula" class="com.sigera.model.Matricula"/>
+    <bean id="Modulo" class="com.sigera.model.Modulo"/>
+    <bean id="ModuloPadre" class="com.sigera.model.ModuloPadre"/>
+    <bean id="Incidencias" class="com.sigera.model.Incidencias"/>
+    <bean id="TipoIncidencia" class="com.sigera.model.TipoIncidencia"/>
+    <bean id="Tipodepago" class="com.sigera.model.TipoPago"/>
+    <bean id="Apoderado" class="com.sigera.model.Apoderado"/>
+    <bean id="Usuario" class="com.sigera.model.Usuario"/>
+    <bean id="Recibo" class="com.sigera.model.Recibo"/>
+    <bean id="Profesor" class="com.sigera.model.Profesor"/>
+    <bean id="Tutor" class="com.sigera.model.Tutor"/>
+    <bean id="TipoAlumno" class="com.sigera.model.TipoAlumno"/>
+    <bean id="Alumno" class="com.sigera.model.Alumno"/>
+    <bean id="ListaMateriales" class="com.sigera.model.ListaMateriales"/>
+   <bean id="CursoPorProfesor" class="com.sigera.model.CursoPorProfesor"/>
+    <bean id="Seccion" class="com.sigera.model.Seccion"/>
+    
     <!-- User Service Declaration -->
     <bean id="DepartamentoService" class="com.sigera.service.IDepartamentoServiceImp">
         <property name="departamentoDAO" ref="DepartamentoDAO" />
@@ -26,7 +48,7 @@
     </bean>
     
     
-  <!-- Data Source Declaration -->
+    <!-- Data Source Declaration -->
     <bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />	
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/sigerabd" />	
@@ -43,6 +65,33 @@
             <list>
                 <value>com.sigera.model.Departamento</value>
                 <value>com.sigera.model.Provincia</value>
+                <value>com.sigera.model.Distrito</value>
+                <value>com.sigera.model.Direccion</value>
+                <value>com.sigera.model.Persona</value>
+                <value>com.sigera.model.Usuario</value>
+                <value>com.sigera.model.Perfil</value>
+                <value>com.sigera.model.Permiso</value>
+                <value>com.sigera.model.Modulo</value>
+                <value>com.sigera.model.ModuloPadre</value>
+                <value>com.sigera.model.Grado</value>
+                <value>com.sigera.model.Matricula</value>
+                <value>com.sigera.model.Recibo</value>
+                <value>com.sigera.model.TipoPago</value>
+                <value>com.sigera.model.Alumno</value>
+                <value>com.sigera.model.Curso</value>
+                <value>com.sigera.model.ListaMateriales</value>
+                <value>com.sigera.model.Material</value>
+                <value>com.sigera.model.Seccion</value>
+                <value>com.sigera.model.Profesor</value>
+                <value>com.sigera.model.Matricula</value>
+                <value>com.sigera.model.Incidencias</value>
+                <value>com.sigera.model.TipoIncidencia</value>
+                <value>com.sigera.model.Tutor</value>
+                <value>com.sigera.model.Apoderado</value>
+                <value>com.sigera.model.CursoPorProfesor</value>
+                <value>com.sigera.model.Profesor</value>
+                <value>com.sigera.model.TipoAlumno</value>
+                
             </list>
         </property>
         <property name="hibernateProperties">
@@ -52,7 +101,7 @@
             </props>
         </property>
     </bean>
-     <!-- Transaction Manager is defined -->
+    <!-- Transaction Manager is defined -->
     <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="SessionFactory"/>
     </bean>
