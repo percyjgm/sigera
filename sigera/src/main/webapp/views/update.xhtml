@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"      
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.xhtml">
+                        <img src="../resources/image/iep_ecp.png" style="height: 20px;"/>
+                    </a>
+                </div>
+
+                <ul class="nav navbar-right top-nav">                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> Percy Gomez <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-envelope"></i> Inbox</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-log-out"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">                        
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-bookmark"></i> Dropdown <i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <ul id="demo" class="collapse">
+                                <li>
+                                    <a href="#">Dropdown Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dropdown Item</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="Matricula/list.xhtml"><i class="glyphicon glyphicon-bookmark"></i> Administrar Matricula</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="glyphicon glyphicon-bookmark"></i> Modulo 1</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="panel panel-default margin-top-2x">
+                <div class="panel-heading">
+                    <h3><strong>Administrar Matricula</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 margin-bottom" >
+                            <h4><strong>Actualizar Matricula</strong></h4>
+                        </div>    
+                        <div class="col-xs-6 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-5 col-lg-3 col-lg-offset-5 margin-bottom" >
+                            <a class="btn btn-warning return-list btn-size" href="#"><i class="glyphicon glyphicon-chevron-left"></i> Regresar a Listado</a>
+                        </div>    
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 margin-bottom">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+                                <input type="text" class="form-control" placeholder="Nombres y Apellidos"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 margin-bottom">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-tag" id="basic-addon1"></span>
+                                <input type="text" class="form-control" placeholder="Grado a registrares"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 margin-bottom">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-shopping-cart" id="basic-addon1"></span>
+                                <input type="text" class="form-control" placeholder="Monto a pagar"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xs-offset-0 col-xs-offset-2 col-md-offset-3 col-lg-offset-3">
+                            <a class="btn btn-danger return-list btn-size" href="#"><i class="glyphicon glyphicon-remove"></i> Cancelar</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <a class="btn btn-default return-list btn-size" href="#"><i class="glyphicon glyphicon-ok"></i> Guardar</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </h:body>
+</html>
+

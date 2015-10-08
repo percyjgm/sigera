@@ -34,15 +34,15 @@
     <bean id="TipoAlumno" class="com.sigera.model.TipoAlumno"/>
     <bean id="Alumno" class="com.sigera.model.Alumno"/>
     <bean id="ListaMateriales" class="com.sigera.model.ListaMateriales"/>
-   <bean id="CursoPorProfesor" class="com.sigera.model.CursoPorProfesor"/>
+    <bean id="CursoPorProfesor" class="com.sigera.model.CursoPorProfesor"/>
     <bean id="Seccion" class="com.sigera.model.Seccion"/>
     
-    <!-- User Service Declaration -->
+    
     <bean id="DepartamentoService" class="com.sigera.service.IDepartamentoServiceImp">
         <property name="departamentoDAO" ref="DepartamentoDAO" />
     </bean>
 	
-    <!-- User DAO Declaration -->
+    
     <bean id="DepartamentoDAO" class="com.sigera.dao.IDepartamentoDaoImp">
         <property name="sessionFactory" ref="SessionFactory" />
     </bean>
@@ -51,7 +51,7 @@
     <!-- Data Source Declaration -->
     <bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />	
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/sigerabd" />	
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/db_sigera" />	
         <property name="user" value="root" />	
         <property name="password" value="123" />	
         <property name="maxPoolSize" value="10" />
@@ -91,7 +91,15 @@
                 <value>com.sigera.model.CursoPorProfesor</value>
                 <value>com.sigera.model.Profesor</value>
                 <value>com.sigera.model.TipoAlumno</value>
-                
+                <value>com.sigera.model.Estado</value>
+                <value>com.sigera.model.Horario</value>
+                <value>com.sigera.model.Salon</value>
+                <value>com.sigera.model.ActividadesExtracurriculares</value>
+                <value>com.sigera.model.ActividadesExtracurricularesPorIncidencias</value>
+                <value>com.sigera.model.Asistencia</value>
+                <value>com.sigera.model.Examen</value>
+                <value>com.sigera.model.TipoExamen</value>
+                <value>com.sigera.model.Tarea</value>
             </list>
         </property>
         <property name="hibernateProperties">

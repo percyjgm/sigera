@@ -50,7 +50,7 @@ public class IDepartamentoDaoImp implements IDepartamentoDao {
 
     @Override
     public List<Departamento> getDepartamentos() {
-       List list = getSessionFactory().getCurrentSession().createQuery("from Departamento").list();
+       List<Departamento> list = getSessionFactory().getCurrentSession().createQuery("from Departamento").list();
         return list;    
     }
 

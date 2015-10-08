@@ -4,14 +4,29 @@
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
     http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
               version="2.0">
-<application>
+    <application>
         <el-resolver>
             org.springframework.web.jsf.el.SpringBeanFacesELResolver
         </el-resolver>
     </application>
     
-     <navigation-rule>
+    <navigation-rule>
         <from-view-id>index.xhtml</from-view-id> 
-        
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/views/home.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/views/error.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>crearUsuario</from-outcome>
+            <to-view-id>/views/create.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarUsuario</from-outcome>
+            <to-view-id>/views/update.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 </faces-config>
